@@ -1,0 +1,43 @@
+{
+  "name": "simple-log-messages",
+  "description": "Simple log messages using chalk.",
+  "version": "1.0.0",
+  "keywords": [
+    "messages",
+    "simple log messages",
+    "simple messages"
+  ],
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "author": "Kasuga <kasu-ga@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasu-ga/simple-log-messages.git"
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify terser",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "terser": "^5.25.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
