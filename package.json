@@ -1,7 +1,7 @@
 {
   "name": "simple-log-messages",
   "description": "Simple log messages using chalk.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "messages",
     "simple log messages",
